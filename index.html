@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Pambazos-pedia</title>
+<link rel="stylesheet" href="pambazos.css">
+</head>
+<body>
+<!---Logo y titulo--->
+ <div class="vector-head-conteiner">
+  <header class="vector-header mw-header no-font.mede-scale">
+   <div class="vector-header-start">
+    <a href="index.html" class="mw-logo">
+	 <img class="mw-logo-icon" src="PFL.png" alt aria-hidden="true" height= "50" width="50">
+	 <a href="index.html"><b><p class="up-title" style="margin-top: -0px; ">Pambazos-pedia</p></b></a>
+	</div>
+ </div>
+<hr>
+<!---Barra buscadora--->
+<input type="text" id="searchBar" placeholder="Buscar en la wiki...">
+<div id="searchResults">
+  <ul id="listado">
+<li><a href="Leyendas.html">Leyendas</a></li>
+<li><a href="Record.html">Recordando</a></li>
+<li><a href="Quesos.html">Quesopolis</a></li>
+<li><a href="Zozu.html">Kaiser Zozu</a></li>
+<li><a href="Ronn.html">Ronnvania</a></li>
+<li><a href="Nadi.html">NadiBall</a></li>
+<li><a href="Klins.html">Klins</a></li>
+<li><a href="Bubul.html">Bubble</a></li>
+<li><a href="Doggy.html">Doggy</a></li>
+<li><a href="JJ.html">El cuarteto de los JJemoxis</a></li>
+<li><a href="Vanano.html">Vanano</a></li>
+<li><a href="Cherry.html">Cherrysand</a></li>
+ <li><a href="PAMB.html">La PAMB</a></li>
+ <li><a href="Ronnpolis.html">Ronnpolis</a></li>
+  </ul>
+</div>
+
+
+
+<script>
+const searchInput = document.getElementById("searchBar");
+const listItems = document.querySelectorAll("#listado li");
+const resultsBox = document.getElementById("searchResults");
+
+searchInput.addEventListener("input", function () {
+  const filter = searchInput.value.toLowerCase();
+  let hasResults = false;
+
+  listItems.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    const match = text.includes(filter);
+    item.style.display = match ? "" : "none";
+    if (match) hasResults = true;
+  });
+
+  resultsBox.style.display = hasResults && filter ? "block" : "none";
+});
+
+// Ocultar resultados si haces clic fuera
+document.addEventListener("click", function (e) {
+  if (!searchInput.contains(e.target) && !resultsBox.contains(e.target)) {
+    resultsBox.style.display = "none";
+  }
+});
+
+</script>
+<!---Estilos--->
+<label for="themeSelect">🎨 Estilo:</label>
+<select id="themeSelect">
+  <option value="default">Normal</option>
+  <option value="dark">Oscuro</option>
+  <option value="retro">Retro</option>
+</select>
+
+<script>
+  const select = document.getElementById("themeSelect");
+
+  // Cargar preferencia guardada
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.body.className = "theme-" + savedTheme;
+    select.value = savedTheme;
+  }
+
+  // Cambiar tema cuando se elige
+  select.addEventListener("change", function () {
+    const theme = this.value;
+    document.body.className = "theme-" + theme;
+    localStorage.setItem("theme", theme); // Guardar elección
+  });
+</script>
+
+
+<!---Caja principal--->
+<div class="main-top">
+ <div class="main-top-left">
+  <h1 id="Bienvenidos_a_Pambazos-Pedia", class="main-top-heider mw-html-heading" style="display: inline" data-mw-thread-id="h-Bienvenidos_a_Pambazos-Pedia"> 
+   <span id="Bienvenidos a Pambazos-pedia.2C"</span>
+    <span data-mw-comment-start-id="h-Bienvenidos_a_Pambazos-Pedia"></span>
+	 <b><center>Bienvenidos a</center>
+	 <a href="index.html" title="Bienvenidos"><center>Pambazos-pedia</center></a></b>
+	<span-data-mw-comment-end="h-Bienvenidos_a_Pambazos-Pedia"></span>
+  </h1>
+  <p class="subtitle">
+  <center>
+  La enciclopedia oficial de Pambazos lore
+  </center>
+  </p>
+ </div>
+</div>
+<hr>
+<!---Sipnopsis general--->
+<table warp="">
+<thead>
+<td>¿Qué es Pambazos Lore?</td>
+</thead>
+<tbody>
+<td>Pambazos lore es una serie web creada en tono de broma sobre la <a href="PAMB.html">P.A.M.B</a> (<b>p</b>rograma de <b>a</b>yuda para <b>m</b>appers y <b>b</b>allers), una organizacion de la comunidad de countryballs creada con el fin de ayudar a creadores de contenido pequeños, trata sobre como <a href="Leyendas.html">Leyendas</a>, un youtuber real que hace videos de historia; y su fiel amigo Recordando (otro youtuber real) intentan gobernar el Planeta y la nacion de la P.A.M.B. mientras los héroes de esta historia (que pueden variar por capítulo) intentan detener los planes de Leyendas.</td><br>
+</tbody>
+</table>
+<!---Cajas principales--->
+<table>
+ <thead>
+  <tr>
+   <th><a href="PAMB.html">P.A.M.B.</a></th>
+   <th><a href="Leyendas.html">Leyendas</a></th>
+   <th>Recordando</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+     Como ya se mencionó anteriormente, es una organizacion de la comunidad de countryballs creada con el fin de ayudar a creadores de contenido pequeños. Es el objetivo principal de leyendas y recordando; hacerse con su poder<br>
+	 <img src="Image_(1).png" alt="Leyendas" style="max-width: 100px">
+   </td>
+   <td>
+     Leyendas es un Youtuber real que hace videos relacionados a la historia, en la serie; es el antagonista principal junto con su amigo Recordando<br>
+     <img src="Leyendas.png" alt="Leyendas" style="max-width: 100px;">
+   </td>
+   <td>
+     Recordando la historia, o por su apodo "Recordando" es aliado de Leyendas, por consiguiente, es antagonista<br>
+	 <img src="Record.png" alt="Recordando" style="max-width: 100px">
+   </td>
+  </tr>
+ </tbody>
+</table>
+<!---Canal--->
+<center><b>¡Mira la serie ahora mismo!</b></center><br>
+<center><img class="playlist-image" src="Captura de pantalla 2025-06-26 230222.png" alt></center><br>
+<hr>
+<center><p class="watch-botton"><a href="https://www.youtube.com/watch?v=YW8rroJNQD8&list=PLcu63_2qRsf3aE-dCJOL2-8PC4Q7MC8-I&ab_channel=Manganeso">👉Mirar👈</p></b></a></center>
+<hr>
+<br>
+<table>
+ <thead>
+  <tr>
+   <th>Manganeso
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><center>Manganeso, mejor conocido como manga, es el creador de todo este universo y croología a través de sus videos, también es un miembro muy respetado de la PAMB por su contenido de calidad</center><br>
+   <center><img src="manganeso.jpg" alt="Manga" style="max-width: 100px"></center>
+  </tr>
+ </tbody>
+</table>
+<hr>
+<!---Juego--->
+<center><b>¡Prueba el nuevo juego de Pambazos lore!</b></center><br>
+<center><img class="game" src="pambazosjuego.png" alt></center><br>
+<center> Sr. Doggy ha abierto su propia tienda en alguna parte de Ronnpolis. Al parecer, vienen muchos clientes. Ten cuidado en los sábados! Leyendas y su ejercito están sueltos. Disfruta vendiendo cosas y no haciendo enojar a lo clientes.</center>
+<br>
+<hr>
+<center><p class="game-botton"><a href="https://scratch.mit.edu/projects/1183228056" ><b>👉Jugar👈</p></b></a></center>
+<hr>
+<br>
+<table>
+ <thead>
+  <tr>
+   <th>Califato
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><center>Califato Almohade, o simplemente Califato, es un personaje secundario de Pambazos lore, miembro de la PAMB y creador del ya mencionado juego</center><br>
+   <center><img src="Captura de pantalla 2025-06-26 235831.png" alt="Califeto" style="max-width: 100px"></center>
+  </tr>
+ </tbody>
+</table>
+<!---Contenido--->
+<table>
+<th colspan="8"> <strong>Contenido</strong></th>
+<tr>
+<th><a href="personajes.html">Personajes:</a></li></th>
+ <td>Lista de todos los personajes, principales y secundarios</td>
+  <th><a href="lugares.html">Lugares:</a></li></th>
+  <td>Escenarios de los acontecimientos</td>
+</tr>
+</table>
+<hr>
+<!---Créditos--->
+    <div id="footnote">
+      <p class="unimportant" style="margin-top: 20px; text-align: center;">
+        <font size="-2">
+          Todos los derechos sobre la creación de videos, su elaboración, publicación y creación original de este universo ficticio a su respectivo creador "Manganeso". Cualquier coinsidencia con personas vivas o muertas es mera coincidencia y no tiene que ver con la realidad. Cualquier interpretacion de eventos historicos es meramente satirico y no refleja opiniones reales<br>
+          Contacto del programador: gonzalezmartin312@aol.com
+        </font>
+      </p>
+    </div>

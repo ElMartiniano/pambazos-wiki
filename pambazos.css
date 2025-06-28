@@ -1,0 +1,203 @@
+/* Estilo general */
+body {
+  font-family: "Linux Libertine", "Georgia", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #202122;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Linux Libertine", "Georgia", serif;
+  color: #000;
+  margin: 1em 0 0.5em;
+  line-height: 1.3;
+}
+
+/* Enlaces */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: #0b0080;
+}
+
+/* Párrafos */
+p {
+  margin: 1em 0;
+}
+
+/* Listas */
+ul, ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+/* Tablas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid #a2a9b1;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Citas */
+blockquote {
+  margin: 1em 2em;
+  padding-left: 1em;
+  border-left: 4px solid #a2a9b1;
+  color: #555;
+  font-style: italic;
+}
+
+/* Código */
+code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f8f9fa;
+  padding: 0.2em 0.4em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+/*el logo we*/
+.vector-header-start {
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
+  gap: 1px; /* Espacio entre logo y título */
+}
+
+.mw-logo {
+  width: 3x; /* Tamaño del logo */
+  height: auto;
+}
+
+.up-title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/*Subtitulo*/
+.subtitle {
+	font-size: .875rem;
+}
+
+#searchResults {
+  display: none;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+#searchBar:focus + #searchResults,
+#searchResults:hover {
+  display: block;
+}
+
+/* Estilo por defecto */
+body.theme-default {
+  background-color: #f8f9fa;
+  color: #202122;
+  font-family: serif;
+}
+
+/* Tema oscuro */
+body.theme-dark {
+  background-color: #121212;
+  color: #00aaff; /* Azul claro */
+  font-family: monospace;
+}
+
+/* También puedes ajustar otros elementos si es necesario */
+body.theme-dark a {
+  color: #00ccff;
+}
+
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3 {
+  color: #00aaff;
+}
+
+/* Tema retro */
+body.theme-retro {
+  background-color: #fff8e7;
+  color: #000080;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.infobox {
+  width: 250px;
+  float: right;
+  margin: 1em 0 1em 1em;
+  padding: 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  font-size: 90%;
+}
+
+.infobox-title {
+  background-color: #cedff2;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.infobox-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  height: auto;
+  padding: 0.5em 0;
+}
+
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox th {
+  text-align: left;
+  vertical-align: top;
+  background-color: #f2f2f2;
+  width: 40%;
+  padding: 4px;
+}
+
+.infobox td {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px;
+}
+
+.principal {
+	font-size: 1.5rem;
+}
+
+.secundarios {
+	font-size: 1.5rem;
+}
+
+.title {
+	text-decoration: underline;
+}
