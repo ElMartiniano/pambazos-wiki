@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>JJ</title>
+<link rel="stylesheet" href="pambazos.css">
+</head>
+<body>
+<!---Logo y titulo--->
+ <div class="vector-head-conteiner">
+  <header class="vector-header mw-header no-font.mede-scale">
+   <div class="vector-header-start">
+    <a href="index.html" class="mw-logo">
+	 <img class="mw-logo-icon" src="PFL.png" alt aria-hidden="true" height= "50" width="50">
+	 <a href="index.html"><b><p class="up-title" style="margin-top: -0px; ">Pambazos-pedia</p></b></a>
+	</div>
+ </div>
+<hr>
+<!---Barra buscadora--->
+<input type="text" id="searchBar" placeholder="Buscar en la wiki...">
+<div id="searchResults">
+  <ul id="listado">
+<li><a href="Leyendas.html">Leyendas</a></li>
+<li><a href="Record.html">Recordando</a></li>
+<li><a href="Quesos.html">Quesopolis</a></li>
+<li><a href="Zozu.html">Kaiser Zozu</a></li>
+<li><a href="Ronn.html">Ronnvania</a></li>
+<li><a href="Nadi.html">NadiBall</a></li>
+<li><a href="Klins.html">Klins</a></li>
+<li><a href="Bubul.html">Bubble</a></li>
+<li><a href="Doggy.html">Doggy</a></li>
+<li><a href="JJ.html">El cuarteto de los JJemoxis</a></li>
+<li><a href="Vanano.html">Vanano</a></li>
+<li><a href="Cherry.html">Cherrysand</a></li>
+ <li><a href="PAMB.html">La PAMB</a></li>
+ <li><a href="Ronnpolis.html">Ronnpolis</a></li>
+  </ul>
+</div>
+
+
+
+<script>
+const searchInput = document.getElementById("searchBar");
+const listItems = document.querySelectorAll("#listado li");
+const resultsBox = document.getElementById("searchResults");
+
+searchInput.addEventListener("input", function () {
+  const filter = searchInput.value.toLowerCase();
+  let hasResults = false;
+
+  listItems.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    const match = text.includes(filter);
+    item.style.display = match ? "" : "none";
+    if (match) hasResults = true;
+  });
+
+  resultsBox.style.display = hasResults && filter ? "block" : "none";
+});
+
+// Ocultar resultados si haces clic fuera
+document.addEventListener("click", function (e) {
+  if (!searchInput.contains(e.target) && !resultsBox.contains(e.target)) {
+    resultsBox.style.display = "none";
+  }
+});
+
+</script>
+<!---Estilos--->
+<label for="themeSelect">🎨 Estilo:</label>
+<select id="themeSelect">
+  <option value="default">Normal</option>
+  <option value="dark">Oscuro</option>
+  <option value="retro">Retro</option>
+</select>
+
+<script>
+  const select = document.getElementById("themeSelect");
+
+  // Cargar preferencia guardada
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.body.className = "theme-" + savedTheme;
+    select.value = savedTheme;
+  }
+
+  // Cambiar tema cuando se elige
+  select.addEventListener("change", function () {
+    const theme = this.value;
+    document.body.className = "theme-" + theme;
+    localStorage.setItem("theme", theme); // Guardar elecci贸n
+  });
+</script>
+<!---Título--->
+<header class="mw-header">
+ <h1 id="first-heading" class="title">
+ JotaJemoxi Bv
+ </h1>
+<!---Tabla--->
+<div class="infobox">
+  <div class="infobox-title">El cuarteto de los JJemoxis</div>
+  <img src="JJ.png" class="infobox-image" alt="jotosjotos">
+  <table>
+    <tr>
+      <th>Rol</th>
+      <td>No aplica</td>
+    </tr>
+    <tr>
+      <th>Apariciones</th>
+      <td>Episodio 4</td>
+    </tr>
+    <tr>
+      <th>Miembros</th>
+      <td>-Auster<br> JJorex<br> SrPiru<br> Bubble
+</td>
+    </tr>
+    <tr>
+      <th>Facción</th>
+      <td>No Aplica</td>
+    </tr>
+  </table>
+</div>
+<!---Contenido--->
+Son miembros de un servidor aparte:JJemoxi. Nisiquiera deberían estar aquí
+
+<p class="Trivia">
+Trivialidades</p>
+-Agarré la agrupacion y la puse en un solo personaje por mera flojera
+<!---Creditos--->
+    <div id="footnote">
+      <p class="unimportant" style="margin-top: 20px; text-align: center;">
+        <font size="-2">
+          Todos los derechos sobre la creación de videos, su elaboración, publicación y creación original de este universo ficticio a su respectivo creador "Manganeso". Cualquier coinsidencia con personas vivas o muertas es mera coincidencia y no tiene que ver con la realidad. Cualquier interpretacion de eventos historicos es meramente satirico y no refleja opiniones reales<br>
+          Contacto del programador: gonzalezmartin312@aol.com
+        </font>
+      </p>
+    </div>
+</body>
+</html>
